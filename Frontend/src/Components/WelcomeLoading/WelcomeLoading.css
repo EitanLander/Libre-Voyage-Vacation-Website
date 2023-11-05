@@ -1,0 +1,34 @@
+.loadingContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  z-index: 9999;
+}
+
+@font-face {
+  font-family: welcomeFont;
+  src: url(../../Assets/fonts/welcomeFont.ttf);
+}
+
+.loadingContainer .preparingYour,
+.loadingContainer .vacation {
+  color: #e14255;
+  font-size: 155px;
+  font-family: welcomeFont;
+  position: relative;
+}
+
+/* Responsive font size for smaller screens */
+@media (max-width: 768px) {
+  .loadingContainer .preparingYour,
+  .loadingContainer .vacation {
+    font-size: 80px;
+  }
+}

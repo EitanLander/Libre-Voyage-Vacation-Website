@@ -1,0 +1,439 @@
+{
+	"info": {
+		"_postman_id": "a56786b9-22b2-4056-a393-d501eb7315db",
+		"name": "Libre Vacations API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28624916"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"eitan@gmail.com\",\r\n    \"firstName\" :\"eitan\",\r\n    \"lastName\": \"Lander\",\r\n    \"birthDate\": \"23/03/1998\",\r\n    \"username\": \"heyyy\",\r\n    \"password\": \"heyyy\",\r\n    \"roleId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" :\"admin@gmail.com\",\r\n    \"password\" :\"11223344!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vacaitons",
+			"item": [
+				{
+					"name": "Get All Vacations",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJJZCI6MSwiZmlyc3ROYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkFkbWluIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJwYXNzd29yZCI6ImQwMTQzNTFiZDQ1N2NkMzQxZjdkYTlmMWVlMmJkYjI4ODg1M2JhZDhiZWRjZWQyMjdmODQwYmVlZWY5MWZkNDg4NTNiNjRlOWY4NTU5MmY4NGMwYjI0ZGFiNjgwMzhjMDY5YWNmOTk5Yzc5ODM0M2E2MjZlMTUxYjU2NmIxZmM5Iiwicm9sZUlkIjoxfSwiaWF0IjoxNjk2NDI3NzEwLCJleHAiOjE2OTY0Mzg1MTB9.NnmWh4pbuaFzrHwK0nUOSAsrRB4xxStqtufPzDFSjD4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/vacations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"vacations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Vacation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJJZCI6MSwiZmlyc3ROYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkFkbWluIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJwYXNzd29yZCI6ImQwMTQzNTFiZDQ1N2NkMzQxZjdkYTlmMWVlMmJkYjI4ODg1M2JhZDhiZWRjZWQyMjdmODQwYmVlZWY5MWZkNDg4NTNiNjRlOWY4NTU5MmY4NGMwYjI0ZGFiNjgwMzhjMDY5YWNmOTk5Yzc5ODM0M2E2MjZlMTUxYjU2NmIxZmM5Iiwicm9sZUlkIjoxfSwiaWF0IjoxNjk2NDI3NzEwLCJleHAiOjE2OTY0Mzg1MTB9.NnmWh4pbuaFzrHwK0nUOSAsrRB4xxStqtufPzDFSjD4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/vacations/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"vacations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Vacation",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Very Very Sabich\",\r\n    \"price\": 10,\r\n    \"stock\": 99,\r\n    \"categoryId\": \"5e91e29b9c08fc560ce2cf37\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/vacations/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"vacations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Vacation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJJZCI6NiwiZmlyc3ROYW1lIjoiRWl0YW4iLCJsYXN0TmFtZSI6IkxhbmRlciIsInVzZXJuYW1lIjoibGFuZGVyaW91cyIsInBhc3N3b3JkIjoibGFuZGVyaW91cyIsInJvbGVJZCI6MX0sImlhdCI6MTY5MDk2NDQyMiwiZXhwIjoxNjkwOTc1MjIyfQ.s_vw5nImYDtauU5YVFy2vuINNxOAHE9ZwiYggtymiVQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/vacations/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"vacations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Vacation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJJZCI6MSwiZmlyc3ROYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkFkbWluIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJwYXNzd29yZCI6ImQwMTQzNTFiZDQ1N2NkMzQxZjdkYTlmMWVlMmJkYjI4ODg1M2JhZDhiZWRjZWQyMjdmODQwYmVlZWY5MWZkNDg4NTNiNjRlOWY4NTU5MmY4NGMwYjI0ZGFiNjgwMzhjMDY5YWNmOTk5Yzc5ODM0M2E2MjZlMTUxYjU2NmIxZmM5Iiwicm9sZUlkIjoxfSwiaWF0IjoxNjk2NDI3NzEwLCJleHAiOjE2OTY0Mzg1MTB9.NnmWh4pbuaFzrHwK0nUOSAsrRB4xxStqtufPzDFSjD4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "destination",
+									"value": "Miami",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Very Nice",
+									"type": "text"
+								},
+								{
+									"key": "startDate",
+									"value": "2023-10-23",
+									"type": "text"
+								},
+								{
+									"key": "endDate",
+									"value": "2023-11-23",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/vacations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"vacations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Vacation By Followers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJJZCI6MSwiZmlyc3ROYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkFkbWluIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJwYXNzd29yZCI6ImQwMTQzNTFiZDQ1N2NkMzQxZjdkYTlmMWVlMmJkYjI4ODg1M2JhZDhiZWRjZWQyMjdmODQwYmVlZWY5MWZkNDg4NTNiNjRlOWY4NTU5MmY4NGMwYjI0ZGFiNjgwMzhjMDY5YWNmOTk5Yzc5ODM0M2E2MjZlMTUxYjU2NmIxZmM5Iiwicm9sZUlkIjoxfSwiaWF0IjoxNjk2NDI3NzEwLCJleHAiOjE2OTY0Mzg1MTB9.NnmWh4pbuaFzrHwK0nUOSAsrRB4xxStqtufPzDFSjD4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/vacations/followed-vacations/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"vacations",
+								"followed-vacations",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Follow Vacation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJJZCI6MSwiZmlyc3ROYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkFkbWluIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJwYXNzd29yZCI6ImQwMTQzNTFiZDQ1N2NkMzQxZjdkYTlmMWVlMmJkYjI4ODg1M2JhZDhiZWRjZWQyMjdmODQwYmVlZWY5MWZkNDg4NTNiNjRlOWY4NTU5MmY4NGMwYjI0ZGFiNjgwMzhjMDY5YWNmOTk5Yzc5ODM0M2E2MjZlMTUxYjU2NmIxZmM5Iiwicm9sZUlkIjoxfSwiaWF0IjoxNjk2NDI3NzEwLCJleHAiOjE2OTY0Mzg1MTB9.NnmWh4pbuaFzrHwK0nUOSAsrRB4xxStqtufPzDFSjD4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\" : \"1\",\r\n    \"vacationId\" : \"1\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/vacations/follow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"vacations",
+								"follow"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unfollow Vacation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJJZCI6MSwiZmlyc3ROYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkFkbWluIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJwYXNzd29yZCI6ImQwMTQzNTFiZDQ1N2NkMzQxZjdkYTlmMWVlMmJkYjI4ODg1M2JhZDhiZWRjZWQyMjdmODQwYmVlZWY5MWZkNDg4NTNiNjRlOWY4NTU5MmY4NGMwYjI0ZGFiNjgwMzhjMDY5YWNmOTk5Yzc5ODM0M2E2MjZlMTUxYjU2NmIxZmM5Iiwicm9sZUlkIjoxfSwiaWF0IjoxNjk2NDI3NzEwLCJleHAiOjE2OTY0Mzg1MTB9.NnmWh4pbuaFzrHwK0nUOSAsrRB4xxStqtufPzDFSjD4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/vacations/unfollow/1/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"vacations",
+								"unfollow",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJJZCI6NywiZmlyc3ROYW1lIjoiMTIzIiwibGFzdE5hbWUiOiIxMjMiLCJlbWFpbCI6ImVtYWlsQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiNzgxNTY2NDVjZDViYmFlYTYwYmI2MmMzYTdjY2MzMTI3NjljNTMxZTk1ZGI1NDU3NWU4ZjQ1OTU0ZmJlODcwYWM4ZTU1Y2ZhY2RiMDI1ZWM0NDdjYmRkZDIzNzY1MjBiOTAzZmUyYmZkY2QxMGVlNjYyNjZhNTU4NzhhZTE0YmYiLCJyb2xlSWQiOjF9LCJpYXQiOjE2OTQxOTQwNjMsImV4cCI6MTY5NDIwNDg2M30.qKFCWH2AWZ51XlzpagPswOg3883DIt5fOSNV8RZ5GnE",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJJZCI6NiwiZmlyc3ROYW1lIjoiRWl0YW4iLCJsYXN0TmFtZSI6IkxhbmRlciIsInVzZXJuYW1lIjoibGFuZGVyaW91cyIsInBhc3N3b3JkIjoibGFuZGVyaW91cyIsInJvbGVJZCI6MX0sImlhdCI6MTY5MDk3OTk2NCwiZXhwIjoxNjkwOTkwNzY0fQ.LHAgs9ZUgjUGK59CjsdcOJv72X2fLeUAnqhYtNBgKMU",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.request.headers.add({key: \"doormanKey\", value: \"I-Love-Kittens!\"});"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

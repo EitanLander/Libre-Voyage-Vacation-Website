@@ -1,0 +1,72 @@
+version: "3.8"
+
+# All 3 services:
+services:
+
+  # 1. Database Service:
+  mysql-service:
+
+    # Image name to create:
+    image: eitanlander/libre-voyage-mysql:1.0
+
+    # Where is the Dockerfile location:
+    build: ./Database
+
+    # Container name: 
+    container_name: libre-voyage-mysql
+
+    # Port binding (host:container):
+    ports:
+      - 3306:3306
+
+    # On crash - restart unless we stopped it manually:
+    restart: unless-stopped
+
+    # Environment variables needed by MySQL image:
+    environment:
+      MYSQL_HOST: localhost
+      MYSQL_USER: Eitan
+      MYSQL_PASSWORD: LibreVoyage
+      MYSQL_DATABASE: libre-voyage
+      MYSQL_ROOT_PASSWORD: LibreVoyage
+
+    # Volume:
+    volumes:
+      - libre-voyage:/var/lib/mysql
+
+# ----------------------------------------------------
+
+  # 2. REST API Service:
+  api-service:
+
+    # On which other service we're depending on:
+    depends_on:
+      - mysql-service
+
+    # Image name to create:
+    image: eitanlander/libre-voyage-api:1.0
+
+    # Where is the Dockerfile location:
+    build: ./Backend
+
+    # Container name: 
+    container_name: libre-voyage-api
+
+    # Port binding (host:container):
+    ports:
+      - 80:4000
+
+    # On crash - restart unless we stopped it manually:
+    restart: unless-stopped
+
+    # Environment variables needed by the api service:
+    environment:
+      MYSQL_HOST: mysql-service # Computer network name.
+      MYSQL_USER: Eitan
+      MYSQL_PASSWORD: LibreVoyage
+      MYSQL_DATABASE: libre-voyage # Optinal (already on the .env file).
+
+# ----------------------------------------------------
+
+volumes:
+  libre-voyage: 

@@ -1,0 +1,16 @@
+.PageNotFound img {
+  border: 2px solid #192c4a;
+  border-radius: 100%;
+  cursor: pointer;
+  animation: movePingPongAndRotate 50s linear infinite; /* Adjust animation duration and timing function as needed */
+}
+
+@keyframes movePingPongAndRotate {
+  0%,
+  100% {
+    transform: translateX(-100%) rotate(0deg);
+  }
+  50% {
+    transform: translateX(100%) rotate(360deg);
+  }
+}

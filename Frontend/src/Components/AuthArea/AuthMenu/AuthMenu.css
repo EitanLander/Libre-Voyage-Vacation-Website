@@ -1,0 +1,39 @@
+.AuthMenu {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  width: 300px;
+  border-radius: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  z-index: 2;
+}
+
+.AuthMenu button {
+  border-radius: 5px;
+  background-color: white;
+  color: blue;
+  border: 2px solid rgb(255, 255, 255);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 7px;
+  margin: 5px;
+}
+
+@media (max-width: 950px) {
+  .AuthMenu {
+    width: 150px;
+  }
+}
+
+@media (max-width: 850px) {
+  .AuthMenu {
+    position: relative;
+    margin: 25px auto;
+    width: 250px;
+  }
+}

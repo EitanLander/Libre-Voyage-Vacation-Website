@@ -1,0 +1,76 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url(../src/Assets/Images/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  cursor: default;
+}
+
+#root {
+  min-height: 100%;
+  background-image: url(../src/Assets/Images/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+}
+
+body::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #DD2B21;
+    border-radius: 10px;
+  }
+
+.my-success-notification {
+  border-radius: 155px;
+}
+
+.my-error-notification {
+  border-radius: 155px;
+}
+
+.error {
+  color: rgb(255, 0, 0);
+  font-weight: 600;
+  padding: 5px;
+  margin: 5px;
+  background-color: rgba(255, 0, 0, 0.046);
+  border-radius: 15px;
+}
+
+input {
+  font-size: 15px;
+}
+
+textarea {
+  font-size: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  animation: fadeOut 15s forwards;
+}

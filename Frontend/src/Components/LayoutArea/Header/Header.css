@@ -1,0 +1,27 @@
+.Header {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Header h1 {
+  font-family: Libra-Voyage-Font;
+  font-size: 100px;
+  padding: 0;
+  margin: 0;
+  font-weight: 100;
+}
+
+.Header .airPlaneGif {
+  width: 50px;
+  transform: rotate(180deg);
+}
+.Header .airPlaneGif2 {
+  width: 50px;
+}
+
+@font-face {
+  font-family: Libra-Voyage-Font;
+  src: url(../../../Assets/fonts/libra-voyage-font.ttf);
+}

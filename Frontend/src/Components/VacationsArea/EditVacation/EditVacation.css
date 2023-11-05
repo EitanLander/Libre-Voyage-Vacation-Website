@@ -1,0 +1,119 @@
+.EditVacation {
+  background-color: #ffffff9a;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  padding: 30px;
+  padding-top: 0px;
+  text-align: center;
+  margin: auto;
+}
+
+.EditVacation h2 {
+  color: #333;
+}
+
+.EditVacation form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.EditVacation label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.EditVacation input,
+.EditVacation textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.EditVacation textarea {
+  height: 70px;
+  resize: none;
+}
+
+.EditVacation button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 150px;
+}
+
+.EditVacation a {
+  text-decoration: none;
+  color: white;
+}
+
+.EditVacation button:hover {
+  background-color: #0056b3;
+}
+
+.EditVacation .error {
+  color: red;
+  font-size: 14px;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.EditVacation .label-text {
+  display: none;
+}
+
+.EditVacation .date-container {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  align-items: center;
+}
+
+.EditVacation .date-input {
+  flex: 1;
+  margin: auto;
+  max-width: 300px;
+}
+
+.EditVacation .uploadPhoto {
+  position: absolute;
+  z-index: 2;
+}
+.EditVacation .custom-file-input {
+  display: none;
+}
+
+.EditVacation .custom-file-label {
+  position: relative;
+  background-color: #007bff;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 150px;
+  z-index: 2;
+}
+
+.EditVacation .custom-file-label:hover {
+  background-color: #0056b3;
+}
+
+.EditVacation .existing-photo {
+  position: relative;
+  width: 250px;
+  margin: 20px;
+  border-radius: 15px;
+  z-index: 1;
+}

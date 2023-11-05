@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.857f55dc.css",
+    "main.js": "/static/js/main.5ba826a3.js",
+    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
+    "static/media/404Gif.gif": "/static/media/404Gif.ae933154099a1c0c7547.gif",
+    "static/media/background.jpg": "/static/media/background.d22e6663255a15fb7940.jpg",
+    "static/media/airplane.gif": "/static/media/airplane.4c24d9b2a67dac4ed26f.gif",
+    "static/media/image1.jpg": "/static/media/image1.3e39d0ffc551517de0d3.jpg",
+    "static/media/image3.jpeg": "/static/media/image3.cd207e5c93aabf44a59c.jpeg",
+    "static/media/vacationCardBackground.png": "/static/media/vacationCardBackground.1f9039cf0ae1c1a13135.png",
+    "static/media/welcomeFont.ttf": "/static/media/welcomeFont.3890088700d2cb7dd983.ttf",
+    "static/media/image2.jpg": "/static/media/image2.3e626b90f333e9c9eddf.jpg",
+    "static/media/miniCard.png": "/static/media/miniCard.cdd0f410384d41d0b91e.png",
+    "static/media/airplaneWelcome.gif": "/static/media/airplaneWelcome.0611e48667c3ec65e0c2.gif",
+    "static/media/libra-voyage-font.ttf": "/static/media/libra-voyage-font.294d294101e0ae84b924.ttf",
+    "static/media/price.otf": "/static/media/price.caadcad8af387d419251.otf",
+    "static/media/loading.webp": "/static/media/loading.21fa47fbd866b70e35f2.webp",
+    "index.html": "/index.html",
+    "main.857f55dc.css.map": "/static/css/main.857f55dc.css.map",
+    "main.5ba826a3.js.map": "/static/js/main.5ba826a3.js.map",
+    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.857f55dc.css",
+    "static/js/main.5ba826a3.js"
+  ]
+}

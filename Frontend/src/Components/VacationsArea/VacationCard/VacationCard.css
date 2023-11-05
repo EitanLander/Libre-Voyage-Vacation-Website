@@ -1,0 +1,258 @@
+@font-face {
+  font-family: price;
+  src: url(../../../Assets/fonts/price.otf);
+}
+
+.VacationCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1000px;
+  height: 400px;
+  margin: auto;
+  border-radius: 40px;
+  box-shadow: 5px 5px 10px;
+  margin-top: 25px;
+  text-align: center;
+  background-image: url("../../../Assets/Images/vacationCardBackground.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  text-transform: uppercase;
+  transform: scale(1);
+  transition: transform 0.3s;
+}
+
+.VacationCard:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+
+@keyframes zoomInAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+.VacationCard .VacationImage {
+  position: absolute;
+  top: 87px;
+  left: 690px;
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgb(254, 254, 254);
+  border-radius: 45px;
+  vertical-align: middle;
+}
+
+.VacationCard .followVacation {
+  position: absolute;
+  top: 330px;
+  left: 810px;
+  border-radius: 10px;
+  background-color: #dd2b21;
+  color: white;
+  border: 2px solid rgb(255, 255, 255);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 10px 15px;
+  display: none;
+  z-index: 5;
+}
+
+.VacationCard .followersCount {
+  position: absolute;
+  top: 330px;
+  left: 730px;
+  border-radius: 10px;
+  background-color: #dd2b21;
+  color: white;
+  border: 2px solid rgb(255, 255, 255);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 10px 15px;
+  display: none;
+  z-index: 5;
+}
+
+.VacationCard:hover .followersCount,
+.VacationCard:hover .followVacation {
+  display: block;
+}
+
+.VacationCard .date {
+  font-weight: 700;
+  font-size: 20px;
+  color: #5374be;
+  position: absolute;
+  top: 188px;
+  left: 170px;
+}
+
+.VacationCard .Destination {
+  position: absolute;
+  top: 120px;
+  left: 40px;
+  font-size: 25px;
+  font-weight: 600;
+  color: #5374be;
+}
+
+.VacationCard .DestinationTo {
+  position: absolute;
+  top: 320px;
+  left: 260px;
+  font-size: 35px;
+  font-weight: 600;
+  color: #5374be;
+}
+
+.VacationCard .Description {
+  position: absolute;
+  top: 130px;
+  right: 370px;
+  width: 240px;
+  height: 50px;
+  font-weight: 600;
+  font-size: 17px;
+  color: #5374be;
+}
+.VacationCard .Price {
+  font-family: price;
+  position: absolute;
+  top: 15px;
+  left: 450px;
+  width: 200px;
+  height: 50px;
+  font-style: italic;
+  font-size: 35px;
+  border-radius: 15px;
+  border: none;
+  color: #ffffff;
+  background-color: transparent;
+  animation: pulse 1s infinite;
+}
+
+.EditButton {
+  position: absolute;
+  top: 330px;
+  left: 410px;
+  border-radius: 10px;
+  background-color: #dd2b21;
+  color: white;
+  border: 2px solid rgb(255, 255, 255);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 8px 15px;
+  display: none;
+}
+
+.DeleteButton {
+  position: absolute;
+  top: 330px;
+  left: 510px;
+  border-radius: 10px;
+  background-color: #dd2b21;
+  color: white;
+  border: 2px solid rgb(255, 255, 255);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 8px 15px;
+  display: none;
+}
+
+.VacationCard:hover .DeleteButton,
+.VacationCard:hover .EditButton {
+  display: block;
+}
+
+.VacationCard a {
+  color: white;
+  text-decoration: none;
+}
+
+.VacationCard .DeleteButton:hover,
+.VacationCard .EditButton:hover {
+  background-color: #ffc900;
+  color: black;
+}
+
+.VacationCard a:visited {
+  color: white;
+}
+
+@keyframes pulse {
+  0% {
+    zoom: 100%;
+  }
+  50% {
+    zoom: 110%;
+  }
+  100% {
+    zoom: 100%;
+  }
+}
+
+@media (max-width: 1030px) {
+  .VacationCard {
+    width: 355px;
+    height: 480px;
+    background-image: url("../../../Assets/Images/miniCard.png");
+    border-radius: 15px;
+  }
+  .VacationCard .VacationImage {
+    display: none;
+  }
+
+  .VacationCard .date {
+    position: absolute;
+    top: 165px;
+    left: 65px;
+  }
+
+  .VacationCard .Destination {
+    top: 70px;
+    left: 125px;
+  }
+
+  .VacationCard .DestinationTo {
+    display: none;
+  }
+
+  .VacationCard .Description {
+    top: 260px;
+    left: 55px;
+  }
+  .VacationCard .Price {
+    display: none;
+  }
+
+  .VacationCard .followVacation {
+    top: 420px;
+    left: 60px;
+  }
+
+  .VacationCard .followersCount {
+    top: 420px;
+    left: 265px;
+  }
+
+  .EditButton {
+    top: 420px;
+    left: 30px;
+  }
+
+  .DeleteButton {
+    top: 420px;
+    left: 130px;
+  }
+}

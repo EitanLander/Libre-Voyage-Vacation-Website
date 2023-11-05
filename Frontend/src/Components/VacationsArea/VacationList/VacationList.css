@@ -1,0 +1,269 @@
+.VacationList .pagination {
+  position: relative;
+  font-size: 45px;
+}
+
+.VacationList button {
+  font-size: 25px;
+}
+
+.VacationList .search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.42);
+  padding: 25px;
+  border-radius: 55px;
+  width: 90%;
+  margin: 15px;
+  z-index: 1;
+}
+
+.VacationList .search-bar input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 450px;
+}
+
+@media (max-width: 900px) {
+  .VacationList .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 15px;
+    width: 70%;
+    margin: 25px auto;
+  }
+
+  .VacationList .search-bar input {
+    width: 90%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .VacationList .fromDate {
+    margin: auto;
+    width: 50%;
+  }
+
+  .VacationList .untilDate {
+    margin: auto;
+    width: 50%;
+  }
+}
+
+@media (max-width: 1600px) {
+  .VacationList .search-bar input {
+    width: 20vw;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.VacationList .searchBar {
+  position: relative;
+  top: 10px;
+}
+
+.VacationList .fromDate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 600;
+}
+
+.VacationList .untilDate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 600;
+}
+.VacationList .price-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 600;
+}
+
+.VacationList .price-slider label {
+  margin-bottom: 5px;
+}
+
+.VacationList .price-slider input[type="range"] {
+  width: 100px;
+}
+
+.VacationList .price-slider span {
+  font-weight: bold;
+}
+
+.VacationList > button {
+  position: relative;
+  border-radius: 10px;
+  background-color: #dd2b21;
+  color: white;
+  border: 2px solid rgb(255, 255, 255);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 35px;
+  padding: 5px 15px;
+  margin-right: 15px;
+}
+
+.VacationList .airplaneBackground {
+  position: absolute;
+  top: 60%;
+  right: 50%;
+  width: 60%;
+  transform: rotateY(180deg);
+  z-index: 0;
+}
+
+.pagination button {
+  background: white;
+  border: none;
+  cursor: pointer;
+  color: #ff0000;
+  font-weight: 500;
+  font-size: 25px;
+  padding: 5px 15px;
+  margin: 0 5px;
+  border-radius: 25px;
+}
+
+.pagination button:hover,
+.pagination button.active {
+  background: rgba(253, 0, 0, 0.874);
+  color: white;
+}
+
+.pagination button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.checkbox-wrapper-16 *,
+.checkbox-wrapper-16 *:after,
+.checkbox-wrapper-16 *:before {
+  box-sizing: border-box;
+}
+
+.checkbox-wrapper.disabled-checkbox {
+  filter: grayscale(1);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.checkbox-wrapper-16 .checkbox-input {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile {
+  border-color: #2260ff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  color: #2260ff;
+}
+.checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile:before {
+  transform: scale(1);
+  opacity: 1;
+  background-color: #2260ff;
+  border-color: #2260ff;
+}
+.checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile .checkbox-icon,
+.checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile .checkbox-label {
+  color: #2260ff;
+}
+.checkbox-wrapper-16 .checkbox-input:focus + .checkbox-tile {
+  border-color: #2260ff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px #b5c9fc;
+}
+.checkbox-wrapper-16 .checkbox-input:focus + .checkbox-tile:before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.checkbox-wrapper-16 .checkbox-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 7rem;
+  min-height: 7rem;
+  border-radius: 0.5rem;
+  border: 2px solid #b5bfd9;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.15s ease;
+  cursor: pointer;
+  position: relative;
+}
+.checkbox-wrapper-16 .checkbox-tile:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid #b5bfd9;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 0.25rem;
+  left: 0.25rem;
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.25s ease;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='192' height='192' fill='%23FFFFFF' viewBox='0 0 256 256'%3E%3Crect width='256' height='256' fill='none'%3E%3C/rect%3E%3Cpolyline points='216 72.005 104 184 48 128.005' fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='32'%3E%3C/polyline%3E%3C/svg%3E");
+  background-size: 12px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.checkbox-wrapper-16 .checkbox-tile:hover {
+  border-color: #2260ff;
+}
+.checkbox-wrapper-16 .checkbox-tile:hover:before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.checkbox-wrapper-16 .checkbox-icon {
+  transition: 0.375s ease;
+  color: #494949;
+}
+.checkbox-wrapper-16 .checkbox-icon svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.checkbox-wrapper-16 .checkbox-label {
+  color: #707070;
+  transition: 0.375s ease;
+  text-align: center;
+}
+
+.checkbox-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 15px;
+  z-index: 2;
+}
+
+.VacationList .iconFilter {
+  width: 50px;
+}
+
+.VacationList .noFilterMessage {
+  color: #dd2b21;
+  background-color: rgba(255, 255, 255, 0.725);
+  font-size: 45px;
+}
