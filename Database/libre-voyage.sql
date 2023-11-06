@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 09, 2023 at 03:28 PM
+-- Generation Time: Nov 06, 2023 at 08:05 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -83,7 +83,12 @@ CREATE TABLE `vacationfollowers` (
 INSERT INTO `vacationfollowers` (`userId`, `vacationId`) VALUES
 (2, 3),
 (2, 7),
-(2, 1);
+(2, 1),
+(1, 1),
+(1, 2),
+(2, 2),
+(2, 4),
+(2, 5);
 
 -- --------------------------------------------------------
 
@@ -107,7 +112,7 @@ CREATE TABLE `vacations` (
 
 INSERT INTO `vacations` (`vacationId`, `destination`, `description`, `startDate`, `endDate`, `price`, `photoUrl`) VALUES
 (1, 'Miami', 'A vacation in Miami promises a vibrant blend of relaxation and excitement.', '2023-09-27', '2023-10-11', 950.00, '78183ef4-7fd6-4a7c-8d7e-27b3a98c607d.jpg'),
-(2, 'Greece', 'Greece, a land of ancient wonders and idyllic islands, offers travelers rich history, breathtaking landscapes, delicious cuisine, and warm hospitality.', '2023-08-11', '2023-08-19', 1234.00, 'b487bd0b-d87f-4a53-bc12-61058a3fe580.jpeg'),
+(2, 'Greece', 'Greece, a land of ancient wonders and idyllic islands, offers travelers rich history, breathtaking landscapes, delicious cuisine, and warm hospitality.', '2023-08-07', '2023-08-15', 1503.00, '499e258f-849e-4126-85e1-bcbfe01e5e92.jpeg'),
 (3, 'Florida', 'Florida, known for its sunny beaches, theme parks like Disney World, and diverse ecosystems, is a top tourist destination offering fun, adventure, and natural beauty.', '2023-09-29', '2023-10-29', 1250.00, '58f60e81-54f7-461f-a0e1-030dc7885b4f.jpg'),
 (4, 'Dubai', 'Dubai, a modern marvel in the desert, boasts luxury shopping, futuristic architecture, desert safaris, and a vibrant blend of cultures, making it a global hotspot for leisure and business.', '2023-09-25', '2023-10-02', 4500.00, '8ff448d4-f833-4710-b906-731973371187.jpg'),
 (5, 'Egypt', 'Egypt, land of pharaohs and pyramids, beckons with its ancient history, Nile River cruises, desert landscapes, and the awe-inspiring Sphinx and Great Pyramids of Giza.', '2023-09-23', '2023-09-28', 150.00, '1f4b2bdb-3a68-496c-ae37-461d7dd7d2a2.jpg'),
@@ -166,7 +171,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `vacations`
 --
 ALTER TABLE `vacations`
-  MODIFY `vacationId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=167;
+  MODIFY `vacationId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=183;
 
 --
 -- Constraints for dumped tables
