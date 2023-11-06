@@ -62,7 +62,8 @@ We ensure the quality of our code through testing:
 - **Assertion Library:** Chai
 - **HTTP Testing:** Supertest
 
-Example of testing the vacations-controller is available in [tests/vacations-controller.test.ts](tests/vacations-controller.test.ts).
+Example of testing the vacations-controller is available in [Backend/tests/vacations-controller.test.ts](tests/vacations-controller.test.ts).
+
 
 To run tests, use the following command:
 
